@@ -110,8 +110,8 @@ def print_ranking():
             exit()
 
 
-def lap():
-    
+#def lap():
+
 
 
 
