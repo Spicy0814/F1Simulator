@@ -66,11 +66,10 @@ grand_prix_locations = ["Bahrain", "Italy", "Portugal", "Spain", "Monaco", "Azer
 grand_prix_location_names = ["Bahrainian", "Italian", "Portugeese", "Spanish", "Manaco", "Azerbajan", "French", "Steiermark", "Austrian", "British", "Hungarian", "Belgian", "Dutch", "Italian", "Russian", "Turkish", "United States", "Mexican", "Brazilian", "Saudi Arabian", "Abu Dhabi"]
 
 
-def grand_prix():
+def grand_prix_start():
     number_location = random.randrange(0, 20)
     current_location = grand_prix_location_names[number_location]
     current_location_other = grand_prix_locations[number_location]
-
 
     input("Press enter to start the race:")
     print("The " + current_location + " Grand Prix is about to start.")
@@ -94,7 +93,8 @@ def grand_prix():
     time.sleep(3)
     print("\n")
 
-grand_prix()
+
+grand_prix_start()
 
 def print_ranking():
     global rank
