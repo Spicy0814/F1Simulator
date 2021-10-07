@@ -6,6 +6,7 @@ year = 2021
 gp_total_2021 = 21
 gp_current = 15
 rank = 0
+lap = 1
 
 test = ""
 
@@ -107,6 +108,11 @@ def print_ranking():
         else:
             race_end = True
             exit()
+
+
+def lap():
+    
+
 
 
 grand_prix_start()
