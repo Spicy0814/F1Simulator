@@ -90,8 +90,6 @@ def grand_prix_start():
     print("And we are off... Hopefully this will be a great race here in " + current_location_other + ".")
 
 
-grand_prix_start()
-
 def print_ranking():
     global rank
     race_end = False
@@ -110,4 +108,6 @@ def print_ranking():
             race_end = True
             exit()
 
+
+grand_prix_start()
 print_ranking()
