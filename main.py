@@ -41,6 +41,7 @@ class driver:
         self.gp_entered = gp_entered
         self.team = team
 
+
 Ham = driver(1, "Lewis Hamilton", 36, 44, "HAM", 100, 176, 281, mercedes)
 Ver = driver(2, "Max Verstappen", 24, 33, "VER", 17, 53, 134, redbull)
 Bot = driver(3, "Valtteri Bottas", 32, 77, "BOT", 9, 64, 171, mercedes)
@@ -62,18 +63,45 @@ Gio = driver(18, "Antonio Giovinazzi", 27, 99, "GIO", 0, 0, 55, alfa_romeo)
 Msc = driver(19, "Mick Schumacher", 22, 47, "MSC", 0, 0, 15,haas)
 Maz = driver(20, "Nikita Mazepin", 22, 9, "MAZ", 0, 0, 15, haas)
 
-driver_list = [Ham, Ver, Bot, Nor, Per, Sai, Lec, Ric, Gas, Alo, Oco, Vet, Str, Tsu, Rus, Lat, Räi, Gio, Msc, Maz]
-grand_prix_locations = ["Bahrain", "Italy", "Portugal", "Spain", "Monaco", "Azerbajan", "France", "Austria", "Austria", "England", "Hungary", "Belgium", "Netherlands", "Italy", "Russia", "Turkey", "United States", "Mexico", "Brazil", "Saudi Arabia", "Abu Dhabi"]
-grand_prix_location_names = ["Bahrainian", "Italian", "Portugeese", "Spanish", "Manaco", "Azerbajan", "French", "Steiermark", "Austrian", "British", "Hungarian", "Belgian", "Dutch", "Italian", "Russian", "Turkish", "United States", "Mexican", "Brazilian", "Saudi Arabian", "Abu Dhabi"]
+class location:
+    def __init__(self, location, location_name, ammount_of_laps, circut_name):
+        self.location = location
+        self.location_name = location_name
+        self.ammount_of_laps = ammount_of_laps
+        self.circut_name = circut_name
 
+Bahrain = location("Bahrain", "Bahrainian", 57, "Bahrain International Circuit")
+Italy = location("Italy", "Italian", 53, "Autodromo Nazionale di Monza")
+Portugal = location("Portugal", "Portugeese", 66, "Algarve International Circuit")
+Spain = location("Spain", "Spanish", 66, "	Circuit de Barcelona-Catalunya")
+Monaco = location("Monaco", "Monaco", 78, "	Circuit de Monaco")
+Azerbajan = location("Azerbajan", "Azerbaijan", 51, "Baku City Circuit")
+France = location("France", "French", 53, "Circuit Paul Ricard")
+Austria_1 = location("Austria", "Steiermark", 71, "Red Bull Ring")
+Austria_2 = location("Austria", "Austrian", 71, "Red Bull Ring")
+England = location("England", "British", 52, "	Silverstone Circuit")
+Hungary = location("Hungary", "Hungarian", 70, "Hungaroring")
+Belgium = location("Belgium", "Belgian", 44, "Circuit de Spa-Francorchamps")
+Netherlands = location("Netherlands", "Dutch", 72, "Zandvoort")
+Russia = location("Russia", "Russian", 53, "Sochi Autodrom")
+Turkey = location("Turkey", "Turkish", 58, "Intercity Istanbul Park")
+United_states = location("United States", "United States", 56, "Circuit of the Americas")
+Mexico = location("Mexico", "Mexican", 71, "Autodromo Hermanos Rodriguez")
+Brazil = location("Brazil", "Brazilian", 71, "Autodromo Jose Carlos Pace")
+Saudi_arabia = location("Saudi Arabia", "Saudi Arabian", 50, "Jeddah Street Circuit")
+Abu_dhabi = location("Abu Dhabi", "Abu Dhabi", 55, "Yas Marina Circuit")
+
+driver_list = [Ham, Ver, Bot, Nor, Per, Sai, Lec, Ric, Gas, Alo, Oco, Vet, Str, Tsu, Rus, Lat, Räi, Gio, Msc, Maz]
+location_list = [Bahrain, Italy, Portugal, Spain, Monaco, Azerbajan, France, Austria_1, Austria_2, England, Hungary, Belgium, Netherlands, Russia, Turkey, United States, Mexico, Brazil, Saudi_arabia, Abu_dhabi]
+incidents = ["crashed with", "Spun off", "engine failiure", ]
 
 def grand_prix_start():
-    number_location = random.randrange(0, 20)
-    current_location = grand_prix_location_names[number_location]
-    current_location_other = grand_prix_locations[number_location]
+
+    number_location = random.randrange(0, 19)
+    current_location = location_list[number_location]
 
     input("Press enter to start the race:")
-    print("The " + current_location + " Grand Prix is about to start.")
+    print("The " + current_location.location_name + " Grand Prix is about to start.")
     time.sleep(2)
 
     print("⚫ ⚫ ⚫ ⚫ ⚫", end="")
@@ -88,7 +116,7 @@ def grand_prix_start():
     print("⚫ ⚫ ⚫ ⚫ ⚫")
 
     time.sleep(1)
-    print("And we are off... Hopefully this will be a great race here in " + current_location_other + ".")
+    print("And we are off... Hopefully this will be a great race here in " + current_location.location + ".")
 
 
 def print_ranking():
@@ -110,8 +138,9 @@ def print_ranking():
             exit()
 
 
-#def lap():
-
+def lap():
+    lap_incident_chance = random.randrange(0, 100)
+    if lap_incident_chance <= 10:
 
 
 
