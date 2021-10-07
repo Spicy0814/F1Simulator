@@ -92,7 +92,7 @@ Saudi_arabia = location("Saudi Arabia", "Saudi Arabian", 50, "Jeddah Street Circ
 Abu_dhabi = location("Abu Dhabi", "Abu Dhabi", 55, "Yas Marina Circuit")
 
 driver_list = [Ham, Ver, Bot, Nor, Per, Sai, Lec, Ric, Gas, Alo, Oco, Vet, Str, Tsu, Rus, Lat, Räi, Gio, Msc, Maz]
-location_list = [Bahrain, Italy, Portugal, Spain, Monaco, Azerbajan, France, Austria_1, Austria_2, England, Hungary, Belgium, Netherlands, Russia, Turkey, United States, Mexico, Brazil, Saudi_arabia, Abu_dhabi]
+location_list = [Bahrain, Italy, Portugal, Spain, Monaco, Azerbajan, France, Austria_1, Austria_2, England, Hungary, Belgium, Netherlands, Russia, Turkey, United_states, Mexico, Brazil, Saudi_arabia, Abu_dhabi]
 incidents = ["crashed with", "Spun off", "engine failiure", ]
 
 def grand_prix_start():
@@ -141,7 +141,7 @@ def print_ranking():
 def lap():
     lap_incident_chance = random.randrange(0, 100)
     if lap_incident_chance <= 10:
-
+        pass
 
 
 grand_prix_start()
