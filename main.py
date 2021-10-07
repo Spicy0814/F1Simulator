@@ -88,10 +88,6 @@ def grand_prix_start():
 
     time.sleep(1)
     print("And we are off... Hopefully this will be a great race here in " + current_location_other + ".")
-    time.sleep(3)
-    print("And the results are...")
-    time.sleep(3)
-    print("\n")
 
 
 grand_prix_start()
