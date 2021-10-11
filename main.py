@@ -116,7 +116,7 @@ def grand_prix_start():
     print("⚫ ⚫ ⚫ ⚫ ⚫")
 
     time.sleep(1)
-    print("\nAnd we are off... Hopefully this will be a great race here in " + current_location.location + ".\n")
+    print("And we are off... Hopefully this will be a great race here in " + current_location.location + ".\n")
 
 
 def print_ranking():
