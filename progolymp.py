@@ -1,3 +1,4 @@
 
-x = input('X value: ')
-y = input('Y value: ')
+
+x = int(input('X value: '))
+y = int(input('Y value: '))
